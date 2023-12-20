@@ -9,7 +9,7 @@ const Home = () => {
       <PhonebookForm />
       <h2>Contacts</h2>
       <PhonebookFilter />
-      <PhonebookList />
+      <PhonebookList recent />
     </>
   );
 };

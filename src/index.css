@@ -19,6 +19,16 @@ a.active {
   color: red;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+p,
+span:hover {
+  cursor: default;
+}
+
 img {
   display: block;
   max-width: 100%;
@@ -44,7 +54,7 @@ code {
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
-  font-size: 40px;
+  font-size: 18px;
   color: #010101;
   gap: 10px;
 }
