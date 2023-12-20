@@ -15,7 +15,7 @@ export const PhonebookList = ({ recent = false }) => {
   const error = useSelector(selectErrorContacts);
   return (
     <>
-      {recent && !filter && <p>Recent contacts</p>}
+      {recent && !filter && <h2>Recent contacts</h2>}
       <ul className={styles.contactsList}>
         {isLoading ? (
           <p>Loading...</p>
