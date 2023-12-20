@@ -19,17 +19,10 @@ export const PhonebookList = ({ recent = false }) => {
         <p>Loading...</p>
       ) : error ? (
         <p>{error}</p>
-      ) : recent ? (
-        filter ? (
-          visibleContactsMap(visibleContacts)
-        ) : (
-          <>
-            <p>Recent contacts</p>
-            {visibleContactsMap(visibleContacts, recent)}
-          </>
-        )
-      ) : (
+      ) : filter ? (
         visibleContactsMap(visibleContacts)
+      ) : (
+        visibleContactsMap(visibleContacts, recent)
       )}
     </ul>
   );
