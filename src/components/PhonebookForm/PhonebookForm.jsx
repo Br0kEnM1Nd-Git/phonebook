@@ -13,20 +13,25 @@ const PhonebookForm = () => {
     const form = e.target;
     const name = form.name.value;
     const phone = form.number.value;
+    const phoneClear = phone.replace(/[\s-]+/g, '');
+
+    if (phoneClear.length >= 15)
+      return Notiflix.Notify.warning(`Phone number is too big!`);
 
     const isNew = contacts.every(el => {
-      if (el.name.toLowerCase() === name.toLowerCase()) return false;
       if (el.phone === phone) return false;
       return true;
     });
 
-    const isNumber = Number(phone);
+    if (!isNew)
+      return Notiflix.Notify.warning(
+        `This phone number is already in contacts!`
+      );
+
+    const isNumber = Number(phoneClear);
     if (!isNumber) return Notiflix.Notify.warning(`${phone} is not a number!`);
 
     form.reset();
-
-    if (!isNew)
-      return Notiflix.Notify.warning(`${name} is already in contacts!`);
 
     const newContact = {
       name,
