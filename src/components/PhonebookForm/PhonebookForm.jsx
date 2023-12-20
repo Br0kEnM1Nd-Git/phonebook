@@ -29,7 +29,7 @@ const PhonebookForm = () => {
       );
 
     const isNumber = Number(phoneClear);
-    if (!isNumber) return Notiflix.Notify.warning(`${phone} is not a number!`);
+    if (!isNumber) return Notiflix.Notify.warning(`Enter correct number!`);
 
     form.reset();
 
