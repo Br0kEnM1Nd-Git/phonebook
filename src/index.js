@@ -8,10 +8,10 @@ import store from 'store/store';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-  <BrowserRouter basename="goit-react-hw-07-phonebook">
+    <BrowserRouter basename="phonebook">
       <Provider store={store}>
         <App />
       </Provider>
-  </BrowserRouter>
-    </React.StrictMode>
+    </BrowserRouter>
+  </React.StrictMode>
 );
