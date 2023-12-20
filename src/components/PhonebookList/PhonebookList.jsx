@@ -14,16 +14,19 @@ export const PhonebookList = ({ recent = false }) => {
   const isLoading = useSelector(selectIsLoadingContacts);
   const error = useSelector(selectErrorContacts);
   return (
-    <ul className={styles.contactsList}>
-      {isLoading ? (
-        <p>Loading...</p>
-      ) : error ? (
-        <p>{error}</p>
-      ) : filter ? (
-        visibleContactsMap(visibleContacts)
-      ) : (
-        visibleContactsMap(visibleContacts, recent)
-      )}
-    </ul>
+    <>
+      {recent && <p>Recent contacts</p>}
+      <ul className={styles.contactsList}>
+        {isLoading ? (
+          <p>Loading...</p>
+        ) : error ? (
+          <p>{error}</p>
+        ) : filter ? (
+          visibleContactsMap(visibleContacts)
+        ) : (
+          visibleContactsMap(visibleContacts, recent)
+        )}
+      </ul>
+    </>
   );
 };
