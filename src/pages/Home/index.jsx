@@ -1,21 +1,23 @@
 import PhonebookForm from 'components/PhonebookForm/PhonebookForm';
-import PhonebookFilter from 'components/PhonebookList/PhonebookFilter';
 import { PhonebookList } from 'components/PhonebookList/PhonebookList';
 import { useDispatch } from 'react-redux';
 import { changeFilterAction } from 'store/filterSlice';
+import styles from './Home.module.scss';
 
 const Home = () => {
   const dispatch = useDispatch();
   dispatch(changeFilterAction(''));
 
   return (
-    <>
-      <h1>Phonebook</h1>
-      <PhonebookForm />
-      <h2>Contacts</h2>
-      <PhonebookFilter />
-      <PhonebookList recent />
-    </>
+    <div className={styles.homeContainer}>
+      <div className={styles.formContainer}>
+        <h2>Add Contact</h2>
+        <PhonebookForm />
+      </div>
+      <div className={styles.contactsContainer}>
+        <PhonebookList recent />
+      </div>
+    </div>
   );
 };
 

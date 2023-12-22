@@ -3,7 +3,7 @@ import styles from './Layout.module.scss';
 
 const Layout = () => {
   return (
-    <div className="app-wrapper">
+    <div className={styles.appWrapper}>
       <nav className={styles.navigation}>
         <NavLink to={'/'}>Home</NavLink>
         <NavLink to={'/contacts'}>Contacts</NavLink>

@@ -5,7 +5,7 @@ import {
   selectIsLoadingContacts,
   selectVisibleContacts,
 } from 'store/selectors';
-import styles from './Phonebook.module.scss';
+import styles from './PhonebookList.module.scss';
 import visibleContactsMap from './visibleContactsMap';
 
 export const PhonebookList = ({ recent = false }) => {

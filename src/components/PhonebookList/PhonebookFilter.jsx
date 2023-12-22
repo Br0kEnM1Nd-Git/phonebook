@@ -1,7 +1,7 @@
 import { useDispatch } from 'react-redux';
 import debounce from 'lodash.debounce';
 import { changeFilterAction } from 'store/filterSlice';
-import styles from './Phonebook.module.scss'
+import styles from './PhonebookList.module.scss';
 
 const PhonebookFilter = () => {
   const dispatch = useDispatch();
